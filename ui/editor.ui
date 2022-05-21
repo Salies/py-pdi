@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>editorClass</class>
+ <widget class="QMainWindow" name="editorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1196</width>
+    <height>594</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PDI ~ Editor de imagens</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QScrollArea" name="scroll_img1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>514</width>
+        <height>514</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="MainLabel" name="label_img1">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>512</width>
+         <height>512</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text" stdset="0">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>90</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>24</pointsize>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>🡄</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="scroll_img2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>514</width>
+        <height>514</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QLabel" name="label_img2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>512</width>
+         <height>512</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1196</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Arquivo">
+    <property name="title">
+     <string>&amp;Arquivo</string>
+    </property>
+    <addaction name="action_Abrir"/>
+    <addaction name="actionSalvar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menu_Operacoes">
+    <property name="title">
+     <string>&amp;Operações</string>
+    </property>
+    <addaction name="actionInverte_cinza"/>
+    <addaction name="actionEqualizarHistograma"/>
+    <addaction name="actionAddSaltPepper"/>
+    <addaction name="actionMedia3x3"/>
+    <addaction name="actionMediana3x3"/>
+    <addaction name="actionBinariza"/>
+    <addaction name="actionLaplaciano4x4"/>
+    <addaction name="separator"/>
+    <addaction name="action_paraCinza"/>
+    <addaction name="actionInverte_colorida"/>
+    <addaction name="separator"/>
+    <addaction name="actionDividir_RGB"/>
+   </widget>
+   <widget class="QMenu" name="menuAjuda">
+    <property name="title">
+     <string>Ajuda</string>
+    </property>
+    <addaction name="actionGuia_b_sico"/>
+    <addaction name="separator"/>
+    <addaction name="actionSobre"/>
+   </widget>
+   <widget class="QMenu" name="menuOutros">
+    <property name="title">
+     <string>Utilitários</string>
+    </property>
+    <addaction name="actionConverter_RGB_HSL"/>
+   </widget>
+   <addaction name="menu_Arquivo"/>
+   <addaction name="menu_Operacoes"/>
+   <addaction name="menuOutros"/>
+   <addaction name="menuAjuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Abrir">
+   <property name="text">
+    <string>&amp;Abrir</string>
+   </property>
+  </action>
+  <action name="action_paraCinza">
+   <property name="text">
+    <string>&amp;Converter para cinza</string>
+   </property>
+  </action>
+  <action name="actionGuia_b_sico">
+   <property name="text">
+    <string>Guia básico</string>
+   </property>
+  </action>
+  <action name="actionSobre">
+   <property name="text">
+    <string>Sobre</string>
+   </property>
+  </action>
+  <action name="actionDividir_RGB">
+   <property name="text">
+    <string>Separar os canais da imagem (RGB)</string>
+   </property>
+  </action>
+  <action name="actionInverte_cinza">
+   <property name="text">
+    <string>Inverter imagem cinza</string>
+   </property>
+  </action>
+  <action name="actionInverte_colorida">
+   <property name="text">
+    <string>Inverter imagem colorida</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </action>
+  <action name="actionConverter_RGB_HSL">
+   <property name="text">
+    <string>Converter RGB/HSL</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionEqualizarHistograma">
+   <property name="text">
+    <string>Equalizar histograma</string>
+   </property>
+  </action>
+  <action name="actionAddSaltPepper">
+   <property name="text">
+    <string>Adicionar ruído sal e pimenta (10%)</string>
+   </property>
+  </action>
+  <action name="actionMedia3x3">
+   <property name="text">
+    <string>Média 3x3</string>
+   </property>
+  </action>
+  <action name="actionMediana3x3">
+   <property name="text">
+    <string>Mediana 3x3</string>
+   </property>
+  </action>
+  <action name="actionBinariza">
+   <property name="text">
+    <string>Binarização</string>
+   </property>
+  </action>
+  <action name="actionLaplaciano4x4">
+   <property name="text">
+    <string>Laplaciano (4x4)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MainLabel</class>
+   <extends>QWidget</extends>
+   <header>mainlabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="editor.qrc"/>
+ </resources>
+ <connections/>
+</ui>
